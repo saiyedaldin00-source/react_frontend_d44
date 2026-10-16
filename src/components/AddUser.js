@@ -164,6 +164,23 @@ function AddUser() {
               placeholder="password"
             />
           </div>
+          <div className="mb-4">
+    <label
+      htmlFor="add-image"
+      className="block text-sm font-medium text-gray-700 mb-1"
+    >
+      User Image
+    </label>
+
+    <input
+      type="file"
+      id="add-image"
+      name="image"
+      accept="image/*"
+      onChange={handleImageChange}
+      className="block w-full text-sm text-gray-700 border border-gray-300 rounded-md p-2"
+    />
+  </div>
 
           <div className="flex justify-end gap-3">
             <button
