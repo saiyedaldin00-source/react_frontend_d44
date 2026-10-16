@@ -87,7 +87,7 @@ function Dashboard() {
                 users.map((user, index) => (
                   <tr key={user.id} className="hover:bg-gray-50">
                     <td className="px-4 py-3 text-sm text-gray-700 border-b">{index + 1}</td>
-                    <td className="px-4 py-3 text-sm text-gray-700 border-b"><img src={user.image} /></td>
+                    <td className="px-4 py-3 text-sm text-gray-700 border-b"><img src={user.image}alt="User" width="50" height="50"/></td>
                     <td className="px-4 py-3 text-sm text-gray-700 border-b">{user.name}</td>
                     <td className="px-4 py-3 text-sm text-gray-700 border-b">{user.email}</td>
                     <td className="px-4 py-3 text-sm text-gray-700 border-b">{user.phone}</td>
