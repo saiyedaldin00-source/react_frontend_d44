@@ -15,7 +15,7 @@ function EditUser() {
 
   const getUserData = async() => {
     try{
-      const response = await axios.get(`http://localhost:5000/api/get-singleuser/${id}`,{
+      const response = await axios.get(`https://react-backend-d44.onrender.com/api/get-singleuser/${id}`,{
         headers:{
           "Content-Type":"Application/JSON",
           "Authorization":"Bearer "+token
@@ -69,7 +69,7 @@ function EditUser() {
 
     setErrors({});
     try{
-      const response = await axios.put(`http://localhost:5000/api/update-user/${id}`,formData,{
+      const response = await axios.put(`https://react-backend-d44.onrender.com/api/update-user/${id}`,formData,{
         headers:{
           "Content-Type":"Application/JSON",
           "Authorization":"Bearer "+token

@@ -38,7 +38,7 @@ function Login() {
     setErrors({});
     console.log('Login Data:', formData);
     try{
-      const response = await axios.post("http://localhost:5000/api/login",formData)
+      const response = await axios.post("https://react-backend-d44.onrender.com/api/login",formData)
       console.log(response.data)
 
       if(response.data.status==1){
@@ -111,6 +111,7 @@ function Login() {
 
           <button
             type="submit"
+            onClick={handleSubmit}
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 rounded-md transition-colors"
           >
             Submit
