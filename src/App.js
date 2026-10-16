@@ -1,4 +1,4 @@
-import {lazy,suspense} from "react";
+import {lazy,Suspense} from "react";
 import { Routes, Route } from 'react-router-dom';
 
 import authRoute from './authRoute';
@@ -11,14 +11,14 @@ const EditUser= lazy(()=>import('./components/EditUser'))
 
 function App() {
   return (
-    <suspense fallback={<div classname='loading'>..loading</div>}>
+    <Suspense fallback={<div classname='loading'>..loading</div>}>
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/dashboard" element={<authRoute><Dashboard /></authRoute>} />
       <Route path="/addUser" element={<authRoute><AddUser /></authRoute>} />
       <Route path="/edit-user/:id" element={<authRoute><EditUser /></authRoute>} />
     </Routes>
-    </suspense>
+    </Suspense>
   );
 }
 
